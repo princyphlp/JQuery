@@ -1,0 +1,28 @@
+
+TESTDataset.ReadXml(Testxmlreviewreader);
+
+DataTable products = TESTDataset.Tables[1];
+
+var
+
+query =from product in products.AsEnumerable()
+
+group product by product.Field<string>("ows_Testfield1") into g
+
+where g.Count() > 1
+
+select
+
+new
+{
+
+Style = g.Key,  ProductCount = g.Count()  };
+// Force immediate execution of the query.
+
+foreach (var product in
+
+query)
+
+{
+
+Console.WriteLine("Color = {0} \t ProductCount = {1}",product.Style, product.ProductCount); }
