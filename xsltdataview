@@ -1,0 +1,25 @@
+
+
+<td id="speakerTable"  bgcolor="silver" width="300 px" style="font-size:x-small">
+
+                  <script type="text/javascript">
+
+                        var returnValue = CallListfieldValue('<xsl:value-of select="@Project_x0020_Name"/>');
+
+                                                                   // var getID = document.getElementById();
+
+                                                                    // alert(getID);
+
+                                                                    if (returnValue == undefined)
+
+                                                                    {
+
+                                                                    }
+
+                                                                    else
+
+                                                                    {
+
+                                                                    document.write(returnValue);
+
+                                                                    }
